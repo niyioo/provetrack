@@ -4,7 +4,7 @@
 
 *Track Progress. Prove Delivery.*
 
-[![CI](https://github.com/niyioo/infratrack-me-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/niyioo/infratrack-me-engine/actions/workflows/ci.yml)
+[![CI](https://github.com/niyioo/provetrack/actions/workflows/ci.yml/badge.svg)](https://github.com/niyioo/provetrack/actions/workflows/ci.yml)
 
 ProveTrack is a field intelligence and accountability platform that helps organisations track projects, verify on-site progress, capture evidence and turn citizen reports into actionable outcomes. Every payment is tied to geo-verified progress.
 
@@ -28,6 +28,38 @@ Built for ministries, donor-funded programs, public works teams, and institution
 - **QA Review** — Approve, reject, or flag evidence with full audit history
 - **Funding Gate Logic** — Deterministic tranche unlock based on milestone, evidence, and QA state
 - **Analytics** — Physical vs financial progress, burn variance, delay detection, risk scoring
+- **Citizen Reporting** — Anonymous reports from the Android app or web portal, with a private tracking code; staff triage, reply or escalate to block payment
+- **Portfolio Map & Reports** — Every project on one map coloured by health against plan; one-click PDF reports with a SHA-256 fingerprint, and CSV export
+
+---
+
+## System Preview
+
+▶️ **Watch the walkthrough:** [ProveTrack: How It Works](https://youtu.be/UoBgRy5QGOw) · Case study: [bravedgesolutions.com/provetrack](https://www.bravedgesolutions.com/provetrack)
+
+### Portfolio map
+Every project on one map, coloured by health measured against its own plan, with the riskiest listed first.
+![Portfolio map](./docs/screenshots/portfolio-map.jpg)
+
+### Anonymous citizen reporting
+No name, phone number or account needed; the citizen gets a tracking code to follow what happens next.
+![Citizen reporting in the Android app](./docs/screenshots/citizen-app.jpg)
+
+### Citizen report triage
+Reports land in the staff queue, where staff request a field visit, reply to the citizen, or escalate to a fraud flag that blocks payment.
+![Citizen report triage](./docs/screenshots/citizen-report-triage.jpg)
+
+### Project details
+Budget, health score, verified physical progress and risk at a glance, with a one-click fingerprinted report.
+![Project details](./docs/screenshots/project-details.jpg)
+
+### QA review
+Geo-verified evidence is scored against a checklist; every required item must reach the milestone's pass mark.
+![QA review](./docs/screenshots/qa-review.jpg)
+
+### Funding release check
+A tranche is released only when every rule passes: approved milestone, verified evidence, independent validation and no open fraud flags.
+![Finance release check](./docs/screenshots/finance-release-check.jpg)
 
 ---
 
@@ -124,7 +156,7 @@ Set `NUM_PROXIES` correctly in production, or every citizen will appear to share
 ## Project Structure
 
 ```
-infratrack-me-engine/
+provetrack/
 ├── backend/    # Django API
 ├── frontend/        # React web dashboard (staff)
 ├── citizen-portal/  # Public anonymous citizen reporting site
